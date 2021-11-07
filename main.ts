@@ -58,6 +58,11 @@
  * 
  * https://www.educba.com/leap-year-program-in-python/
  */
+input.onButtonPressed(Button.A, function () {
+    tall_a_input = tall_a_input + 1
+    tall_a_input = tall_a_input % 10
+    basic.showNumber(tall_a_input)
+})
 input.onButtonPressed(Button.AB, function () {
     basic.showNumber(tall_aar)
     // ny test leap year
@@ -87,13 +92,34 @@ input.onButtonPressed(Button.AB, function () {
         basic.showIcon(IconNames.No)
     }
 })
+input.onButtonPressed(Button.B, function () {
+    if (tellantallsiffer == 1) {
+        basic.showIcon(IconNames.SmallDiamond)
+        basic.showNumber(tellantallsiffer)
+    } else {
+        tall_aar = tall_aar + tellantallsiffer
+        basic.showNumber(tellantallsiffer)
+        basic.showNumber(tall_aar)
+        tellantallsiffer = tellantallsiffer * 0.1
+    }
+})
+// Alternativ til å legge inn tallet slik som i oppgave 1 - 3
 input.onGesture(Gesture.Shake, function () {
     tall_aar = randint(tall_aar_min, tall_aar_max)
     basic.showNumber(tall_aar)
 })
+// Logo viser om dagens dato er skuddår.
+// Med en enhet som kunne lest inn klokken kunne denne, vist dagens info.
+// RTC-modul må sjekkes ut.
+// Innholdet i tall_år kan testes med A+B
+// 2024 er et skuddår.
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     tall_tst_skuddaar01 = 2021
+    tellantallsiffer = 1000
+    tall_aar = 2024
 })
+let tall_a_input = 0
+let tellantallsiffer = 0
 let tall_aar = 0
 let tst_tall_mulig_skuddaar01 = 0
 let tall_aar_max = 0
@@ -104,6 +130,48 @@ tall_aar_min = -500
 tall_aar_max = 2401
 tst_tall_mulig_skuddaar01 = 2401
 tall_aar = 2021
+tellantallsiffer = 1000
+let rulle0_9 = 0
+/**
+ * Startet med oppgave 4 for øving 2. Tanken var å unngå å lagre tall som string og så hente ut tallet med noen funksjoner.
+ * 
+ * str2num, num2str o.l.
+ * 
+ * Tanken er at hvert tall (årstall har fine siffer. 1000-plass, 100-plass, 10-plass or 1-plass
+ * 
+ * Hvert siffer får da en vekt og til sammen lages tallet med å legge sammen del-tallene.
+ * 
+ * Oppgave 4 passet da godt som eksperiment da dette krever 4 siffer. Oppgaven kunne blitt laget mer generisk med løkker om legger inn faktor basert på hvor mange siffer som oppgis, men det ble ikke gjort siden årstall skal ha 4 siffer. (bør ha i alle fall)
+ * 
+ * On shake og trykke på logo ble lagt inn fordi det var tungvint å taste inn siffer ved hver kjøring, og en slipper å endre kode for hver gang.
+ * 
+ * On shake legger inn et vilkårlig tall fra 400 BC til 2401 AD, men det er ingenting i veien for andre tall. NB før år 1582 var det annen skuddårsberegning enn i 2021. 
+ * 
+ * Se de andre kommentarene for mer informasjon.
+ */
+/**
+ * A blar gjennom 0- 9
+ * 
+ * B lagrer tallet og * med 1000
+ * 
+ * A blar på nytt
+ * 
+ * B lagrer tallet og * med 100
+ * 
+ * A blar gjennom 0 - 9
+ * 
+ * B lagrer tallet og * med 10
+ * 
+ * A blar gjennom 0 - 9
+ * 
+ * B lagrer tallet og * med 10
+ * 
+ * Fire tall så vises tallet
+ * 
+ * Teller er blitt 4.
+ * 
+ * Logo tar vare på tallet og setter teller til 0
+ */
 basic.forever(function () {
     music.rest(music.beat(BeatFraction.Breve))
     music.rest(music.beat(BeatFraction.Breve))
