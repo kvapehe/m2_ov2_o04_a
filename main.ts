@@ -124,7 +124,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     tall_aar = 2024
 })
 /**
- * Skuddårsberegning.
+ * Skuddårsberegning. (Se javascript-koden for å se mange referanser og flere kommentarer)
  * 
  * Programmet er slik.
  * 

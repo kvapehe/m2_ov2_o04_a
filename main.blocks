@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="t|YtDx#}Gr+Cz=RR5$1o">tall_a_input</variable><variable id="w7N~Zr5)@VgOEES`tsOF">tall_aar</variable><variable id=".eS#gA{!:XV^yeV:]F+9">tst_tall_mulig_skuddaar01</variable><variable id="*6sEGUHS$KORgWA_av~R">tellantallsiffer</variable><variable id="J=F~An2~dWS1Iqt.$tv]">tall_aar_min</variable><variable id="/K[fC+SCM|jj$xDJ6CYW">tall_aar_max</variable><variable id="I){^/@1[71zV|lv1BpMs">tall_tst_skuddaar01</variable><variable id="=spbEf8TxE0#}M.O4uMy">rulle0_9</variable></variables><comment id="EQ@89r6#)(q4I{h{E#`/" data="0" x="-265" y="-935" h="907" w="851">Skuddårsberegning.
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="t|YtDx#}Gr+Cz=RR5$1o">tall_a_input</variable><variable id="w7N~Zr5)@VgOEES`tsOF">tall_aar</variable><variable id=".eS#gA{!:XV^yeV:]F+9">tst_tall_mulig_skuddaar01</variable><variable id="*6sEGUHS$KORgWA_av~R">tellantallsiffer</variable><variable id="J=F~An2~dWS1Iqt.$tv]">tall_aar_min</variable><variable id="/K[fC+SCM|jj$xDJ6CYW">tall_aar_max</variable><variable id="I){^/@1[71zV|lv1BpMs">tall_tst_skuddaar01</variable><variable id="=spbEf8TxE0#}M.O4uMy">rulle0_9</variable></variables><comment id="EQ@89r6#)(q4I{h{E#`/" data="0" x="-265" y="-935" h="907" w="851">Skuddårsberegning. (Se javascript-koden for å se mange referanser og flere kommentarer)
 
 Programmet er slik.
 
@@ -18,7 +18,7 @@ Målet med oppgaven var ikke skrive kompakt metode, men lage en som dekker alt m
 
 Ofte kan det være lurt med å sette "flagg" og egentlig burde hver if-test starte med AND og flagg slik at en ikke utfører unødvendige tester, og dette er for så vidt det else if gjør.
 
-Men det kjer i en engang, slik at en ikke nødvendigvis kan se alle steg i denne oppgaven er det gjort et forsøk på å vise resulter fra de ulike stegene og ikke bare godkjent / ikke godkjent på slutten. Det er mange løsinger på oppgaven alt etter om en søker etter skuddår, eller år som IKKE er skuddår.</comment><comment id="|s:ejw.;E2eM/dNUA~Q[" data="1" x="-81" y="244" h="757" w="699">Startet med oppgave 4 for øving 2. Tanken var å unngå å lagre tall som string og så hente ut tallet med noen funksjoner. (unngå disse str2num, num2str o.l.)
+Men det kjer i en engang, slik at en ikke nødvendigvis kan se alle steg i denne oppgaven er det gjort et forsøk på å vise resulter fra de ulike stegene og ikke bare godkjent / ikke godkjent på slutten. Det er mange løsinger på oppgaven alt etter om en søker etter skuddår, eller år som IKKE er skuddår.</comment><comment id="|s:ejw.;E2eM/dNUA~Q[" data="1" x="-81" y="244" h="760.3333129882812" w="724.5555419921875">Startet med oppgave 4 for øving 2. Tanken var å unngå å lagre tall som string og så hente ut tallet med noen funksjoner. (unngå disse str2num, num2str o.l.)
 
 Med microbit er det utfordrende å vise informasjon på et skjermbilde så en unngår "scrolling". Derfor benyttes en del symboler og ventetegn.
 
@@ -37,7 +37,7 @@ On shake og trykke på logo ble lagt inn fordi det var tungvint å taste inn sif
 
 On shake legger inn et vilkårlig tall fra 400 BC til 2401 AD, men det er ingenting i veien for andre tall. NB før år 1582 var det annen skuddårsberegning enn i 2021.
 
-Se de andre kommentarene for mer informasjon. NB.  Det kan hende en må vise javascript for å se kommentarene. Makecode har en egen evne å gjemme kommentarer når en beveger seg mellom blokkode og javascript.</comment><block type="device_forever" id="cWc+?{8=w6U_o{0h)XiD" x="-699" y="-766"><comment pinned="false" h="80" w="160" relx="10" rely="10">A blar gjennom 0- 9
+Se de andre kommentarene for mer informasjon. NB.  Det kan hende en må vise javascript for å se kommentarene. Makecode har en egen evne å gjemme kommentarer når en beveger seg mellom blokkode og javascript.</comment><block type="device_forever" id="cWc+?{8=w6U_o{0h)XiD" x="-700" y="-772"><comment pinned="false" h="80" w="160" relx="10" rely="10">A blar gjennom 0- 9
 
 B lagrer tallet og * med 1000
 
